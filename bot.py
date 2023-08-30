@@ -23,7 +23,7 @@ dp = Dispatcher(bot)
 """
 proxy = {
     "http": "http://lwsuaaes-rotate:kmg4frqdl32x@p.webshare.io:80",
-    "https": "https://lwsuaaes-rotate:kmg4frqdl32x@p.webshare.io:80",
+    "https": "http://lwsuaaes-rotate:kmg4frqdl32x@p.webshare.io:80",
 } 
 """
 session = requests.session()
@@ -76,7 +76,7 @@ async def tv(message: types.Message):
     if "Access denied" in r.text:
         await message.reply(f"""
 <b>COMBO</b>➟ <code>{ac}</code>
-<b>BOTBY</b>➟ SUNX1
+<b>BOTBY</b>➟ •SUNX1•
 <b>STATUS</b>➟ ❌WRONG DETAILS
 TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
@@ -86,7 +86,7 @@ TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
         await message.reply(f"""
 <b>COMBO</b>➟ <code>{ac}</code>
 <b>STATUS</b>➟ ✅VALID
-<b>BOTBY</b>➟ SUNX1
+<b>BOTBY</b>➟ •SUNX1•
 <b>LEVEL</b>➟ {res['details']['bearType']}
 <b>VALIDTILL</b>➟ {res['details']['fullVersionUntil']}
 TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
@@ -194,7 +194,7 @@ async def ch(message: types.Message):
         await message.reply(f"""
 ✅<b>CC</b>➟ <code>{cc}</code>
 <b>STATUS</b>➟ #ApprovedCCN
-<b>BOTBY</b>➟ SUNX1
+<b>BOTBY</b>➟ •SUNX1•
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
@@ -205,7 +205,7 @@ async def ch(message: types.Message):
         await message.reply(f"""
 ❌<b>CC</b>➟ <code>{cc}</code>
 <b>STATUS</b>➟ #ApprovedCVV
-<b>BOTBY</b>➟ SUNX1
+<b>BOTBY</b>➟ •SUNX1•
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
 """)
@@ -213,7 +213,7 @@ async def ch(message: types.Message):
         await message.reply(f"""
 ❌<b>CC</b>➟ <code>{cc}</code>
 <b>STATUS</b>➟ Declined
-<b>BOTBY</b>➟ SUNX1
+<b>BOTBY</b>➟ •SUNX1•
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
