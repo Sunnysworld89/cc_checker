@@ -40,7 +40,9 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "Hello how to use <code>/chk cc/mm/yy/cvv</code> bot by ⚜️ SUNX1 ⚜️"
+        "Hello how to use this bot --- <code>/chk</code> - to check your cc
+                                       <code>/tv</code> - combo Tunnelbear 
+              bot by ⚜️ SUNX1 ⚜️"
     )
 
 @dp.message_handler(commands=['tv'], commands_prefix=PREFIX)
@@ -77,7 +79,7 @@ async def tv(message: types.Message):
         await message.reply(f"""
 <b>COMBO</b>➟ <code>{ac}</code>
 <b>BOTBY</b>➟ •SUNX1•
-<b>STATUS</b>➟ ❌WRONG DETAILS
+<b>STATUS</b>➟ ❌❌️ WRONG DETAILS ❌️❌️
 TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
 """)
@@ -85,7 +87,7 @@ TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
         res = r.json()
         await message.reply(f"""
 <b>COMBO</b>➟ <code>{ac}</code>
-<b>STATUS</b>➟ ✅VALID
+<b>STATUS</b>➟ ✅✅️ VALID ✅️✅️
 <b>BOTBY</b>➟ •SUNX1•
 <b>LEVEL</b>➟ {res['details']['bearType']}
 <b>VALIDTILL</b>➟ {res['details']['fullVersionUntil']}
@@ -114,7 +116,7 @@ async def ch(message: types.Message):
     BIN = cc[:6]
     if BIN in BLACKLISTED:
         return await message.reply(
-            "<b>BLACKLISTED BIN</b>"
+            "<b>❗️BLACKLISTED BIN❗️</b>"
             )
     # get guid muid sid
     headers = {
@@ -192,8 +194,8 @@ async def ch(message: types.Message):
     toc = time.perf_counter()
     if "incorrect_cvc" in rx.text:
         await message.reply(f"""
-✅<b>CC</b>➟ <code>{cc}</code>
-<b>STATUS</b>➟ #ApprovedCCN
+[×]<b>CC</b>➟ <code>{cc}</code>
+<b>STATUS</b>➟ ✅️✅️ ApprovedCCN ✅️✅️
 <b>BOTBY</b>➟ •SUNX1•
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
@@ -203,16 +205,16 @@ async def ch(message: types.Message):
         await message.reply("[UPDATE] PROXIES ERROR")
     elif rx.status_code is 200:
         await message.reply(f"""
-❌<b>CC</b>➟ <code>{cc}</code>
-<b>STATUS</b>➟ #ApprovedCVV
+[×]<b>CC</b>➟ <code>{cc}</code>
+<b>STATUS</b>➟ ✅️✅️ ApprovedCVV ✅️✅️
 <b>BOTBY</b>➟ •SUNX1•
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
 <b>CHKBY</b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
 """)
     else:
         await message.reply(f"""
-❌<b>CC</b>➟ <code>{cc}</code>
-<b>STATUS</b>➟ Declined
+[×]<b>CC</b>➟ <code>{cc}</code>
+<b>STATUS</b>➟ ❌️❌️ Declined ❌️❌️
 <b>BOTBY</b>➟ •SUNX1•
 <b>MSG</b>➟ {msg}
 <b>TOOK:</b> <code>{toc - tic:0.4f}</code>(s)
