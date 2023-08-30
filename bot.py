@@ -39,11 +39,12 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 @dp.message_handler(commands=['start', 'help'], commands_prefix=PREFIX)
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
-    await message.reply(
-        "Hello how to use this bot --- <code>/chk</code> - to check your cc
-                                       <code>/tv</code> - combo Tunnelbear 
-              bot by ⚜️ SUNX1 ⚜️"
-    )
+    await message.reply("""
+        "<b>Hello how to use this bot</b> --- 
+        <code>/chk</code> - to check your cc
+        <code>/tv</code> - combo Tunnelbear    
+        <b>OWNER</b> ⚜️ SUNX1 ⚜️"
+   """ )
 
 @dp.message_handler(commands=['tv'], commands_prefix=PREFIX)
 async def tv(message: types.Message):
